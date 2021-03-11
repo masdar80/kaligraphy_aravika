@@ -152,7 +152,7 @@ flutter:
     - img/vector_brushes/brush.ai
     - img/vector_brushes/brush.eps
     - img/vector_brushes/brush.pdf
-    - images/hut.png
+    
 
 
   # To add assets to your application, add an assets section, like this:

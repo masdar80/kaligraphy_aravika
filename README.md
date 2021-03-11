@@ -1,6 +1,6 @@
-# raqeem_app
+# kaligraphy_app
 
-Raqeem App
+kaligraphy App
 
 ## Getting Started
 

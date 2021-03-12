@@ -78,13 +78,13 @@ flutter:
     - img/subcat/ruqaa/01_All buttons_04.png
     - img/subcat/ruqaa/01_All buttons_03.png
     - img/subcat/ruqaa/01_All buttons_05.png
-    - img/subcat/diwani/02_buttons_01.png
-    - img/subcat/diwani/02_buttons_02.png
-    - img/subcat/diwani/02_buttons_03.png
-    - img/subcat/diwani/02_buttons_04.png
-    - img/subcat/diwani/02_buttons_05.png
-    - img/subcat/diwani/02_buttons_06.png
-    - img/subcat/diwani/02_buttons_07.png
+    - img/subcat/diwani/buttons_01.png
+    - img/subcat/diwani/buttons_02.png
+    - img/subcat/diwani/buttons_03.png
+    - img/subcat/diwani/buttons_04.png
+    - img/subcat/diwani/buttons_05.png
+    - img/subcat/diwani/buttons_06.png
+    - img/subcat/diwani/buttons_07.png
     - img/subcat/diwani_jali/03_buttons_01.png
     - img/subcat/diwani_jali/03_buttons_02.png
     - img/subcat/diwani_jali/03_buttons_03.png
@@ -152,8 +152,9 @@ flutter:
     - img/vector_brushes/brush.ai
     - img/vector_brushes/brush.eps
     - img/vector_brushes/brush.pdf
+    
 
-#mac test
+
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

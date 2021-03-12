@@ -1,30 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:fluttergesture/components/Settings.dart';
-
-import 'Letters.dart';
 import 'components/drawer.dart';
 import 'package:vertical_tabs/vertical_tabs.dart';
 import 'components/options.dart' as op_menu;
 
-class Ruqaa extends StatefulWidget {
+class GenericFont extends StatefulWidget {
+  GenericFont(this.title);
+  final String title;
   @override
-  _RuqaaState createState() => _RuqaaState();
+  _GenericFontState createState() => _GenericFontState(title);
 }
 
-class _RuqaaState extends State<Ruqaa> {
+class _GenericFontState extends State<GenericFont> {
+  _GenericFontState(this.title);
+  final String title;
+
   static MediaQueryData _mediaQueryData;
   static double screenWidth;
   static double screenHeight;
 
   @override
   Widget build(BuildContext context) {
-    Setting.setselectedNote("ruqaa");
-    Setting.user_path="ruqaa";
     _mediaQueryData = MediaQuery.of(context);
     screenWidth = _mediaQueryData.size.width;
     screenHeight = _mediaQueryData.size.height;
-    if(screenWidth<screenHeight)
-      screenHeight=screenHeight*0.50;
     return Directionality(
         textDirection: TextDirection.rtl,
         child: Scaffold(
@@ -41,7 +39,7 @@ class _RuqaaState extends State<Ruqaa> {
                     fit: BoxFit.cover)),
             child: VerticalTabs(
               backgroundColor: Colors.amber,
-              tabsWidth: screenWidth/7.75,
+              tabsWidth: screenWidth / 7.75,
               tabs: <Tab>[
                 Tab(
                     child: Container(
@@ -80,7 +78,7 @@ class _RuqaaState extends State<Ruqaa> {
                     children: <Widget>[
                       Container(
                         height: screenHeight / 8.73,
-                     //   width: screenWidth / 10.07,
+                        //width: screenWidth / 6.07,
                         // padding: EdgeInsets.all(10),
                         margin: EdgeInsets.fromLTRB(
                             screenWidth / 48.14,
@@ -93,7 +91,7 @@ class _RuqaaState extends State<Ruqaa> {
                         ),
 
                         child: Image.asset(
-                          "img/subcat/ruqaa/01_All buttons_01.png",
+                          "img/subcat/"+title+"/buttons_01.png",
                           //fit: BoxFit.cover,
                         ),
                       ),
@@ -116,14 +114,14 @@ class _RuqaaState extends State<Ruqaa> {
                                 ),
 
                                 child: Image.asset(
-                                  "img/subcat/ruqaa/01_All buttons_03.png",
+                                  "img/subcat/"+title+"/buttons_03.png",
                                 ),
                               ),
                               Column(children: <Widget>[
                                 //first element in column is the transparent offset
                                 Container(
-                                  height: screenHeight / 4.67,
-                                  width: screenWidth / 6,
+                                  height: 280,
+                                  width: 300,
                                   margin: EdgeInsets.fromLTRB(
                                       screenWidth / 4, 0, 0, 0),
                                 ),
@@ -165,27 +163,22 @@ class _RuqaaState extends State<Ruqaa> {
                                 height: screenHeight / 4.36,
                                 width: screenWidth / 3.04,
                                 // padding: EdgeInsets.all(10),
-                                margin: EdgeInsets.fromLTRB(
-                                    0,
-                                    screenHeight / 48.63,
-                                    0,
-                                    screenHeight / 48.63),
+                                margin: EdgeInsets.fromLTRB(0, screenHeight / 48.63, 0, screenHeight / 48.63),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(80),
                                   // border: Border.all(color: Colors.black, width: 7),
                                 ),
 
                                 child: Image.asset(
-                                  "img/subcat/ruqaa/01_All buttons_02.png",
+                                  "img/subcat/"+title+"/buttons_02.png",
                                 ),
                               ),
                               Column(children: <Widget>[
                                 //first element in column is the transparent offset
                                 Container(
                                   height: screenHeight / 4.67,
-                                  width: screenWidth / 6,
-                                  margin: EdgeInsets.fromLTRB(
-                                      screenWidth / 6, 0, 0, 0),
+                                  width: screenWidth /0,
+                                  margin: EdgeInsets.fromLTRB(screenWidth / 6, 0, 0, 0),
                                 ),
                                 Container(
                                   child: Center(
@@ -235,14 +228,14 @@ class _RuqaaState extends State<Ruqaa> {
                                     screenWidth / 25.14,
                                     screenHeight / 48.63,
                                     screenWidth / 45.53,
-                                    screenHeight / 48.63),
+                                    screenHeight / 48.63 ),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(80),
                                   // border: Border.all(color: Colors.black, width: 7),
                                 ),
 
                                 child: Image.asset(
-                                  "img/subcat/ruqaa/01_All buttons_05.png",
+                                  "img/subcat/"+title+"/buttons_05.png",
                                 ),
                               ),
                               Column(children: <Widget>[
@@ -250,8 +243,7 @@ class _RuqaaState extends State<Ruqaa> {
                                 Container(
                                   height: screenHeight / 4.67,
                                   width: screenWidth / 6,
-                                  margin: EdgeInsets.fromLTRB(
-                                      screenWidth / 4, 0, 0, 0),
+                                  margin: EdgeInsets.fromLTRB(screenWidth / 4, 0, 0, 0),
                                 ),
                                 Container(
                                   child: Center(
@@ -291,18 +283,15 @@ class _RuqaaState extends State<Ruqaa> {
                                 height: screenHeight / 4.36,
                                 width: screenWidth / 3.04,
                                 // padding: EdgeInsets.all(10),
-                                margin: EdgeInsets.fromLTRB(
-                                    0,
-                                    screenHeight / 48.63,
-                                    0,
-                                    screenHeight / 48.63),
+                                margin: EdgeInsets.fromLTRB(0, screenHeight / 48.63, 0, screenHeight / 48.63),
+
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(80),
                                   // border: Border.all(color: Colors.black, width: 7),
                                 ),
 
                                 child: Image.asset(
-                                  "img/subcat/ruqaa/01_All buttons_04.png",
+                                  "img/subcat/"+title+"/buttons_04.png",
                                 ),
                               ),
                               Column(children: <Widget>[
@@ -310,8 +299,7 @@ class _RuqaaState extends State<Ruqaa> {
                                 Container(
                                   height: screenHeight / 4.67,
                                   width: screenWidth / 6,
-                                  margin: EdgeInsets.fromLTRB(
-                                      screenWidth / 6, 0, 0, 0),
+                                  margin: EdgeInsets.fromLTRB(screenWidth / 6, 0, 0, 0),
                                 ),
                                 Container(
                                   child: Center(
@@ -343,9 +331,7 @@ class _RuqaaState extends State<Ruqaa> {
                                 )
                               ])
                             ]),
-                            onTap: () {
-                              Navigator.of(context).pushNamed("ruqaa1");
-                            },
+                            onTap: () {},
                           ),
                         ],
                       ),
@@ -368,7 +354,7 @@ class _RuqaaState extends State<Ruqaa> {
                                 ),
 
                                 child: Image.asset(
-                                  "img/subcat/ruqaa/01_All buttons_06.png",
+                                  "img/subcat/"+title+"/buttons_07.png",
                                 ),
                               ),
                               Column(children: <Widget>[
@@ -376,8 +362,7 @@ class _RuqaaState extends State<Ruqaa> {
                                 Container(
                                   height: screenHeight / 4.67,
                                   width: screenWidth / 6,
-                                  margin: EdgeInsets.fromLTRB(
-                                      screenWidth / 4, 0, 0, 0),
+                                  margin: EdgeInsets.fromLTRB(screenWidth / 4, 0, 0, 0),
                                 ),
                                 Container(
                                   child: Center(
@@ -417,18 +402,14 @@ class _RuqaaState extends State<Ruqaa> {
                                 height: screenHeight / 4.36,
                                 width: screenWidth / 3.04,
                                 // padding: EdgeInsets.all(10),
-                                margin: EdgeInsets.fromLTRB(
-                                    0,
-                                    screenHeight / 48.63,
-                                    0,
-                                    screenHeight / 48.63),
+                                margin: EdgeInsets.fromLTRB(0, screenHeight / 48.63, 0, screenHeight / 48.63),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(80),
                                   // border: Border.all(color: Colors.black, width: 7),
                                 ),
 
                                 child: Image.asset(
-                                  "img/subcat/ruqaa/01_All buttons_06.png",
+                                  "img/subcat/"+title+"/buttons_06.png",
                                 ),
                               ),
                               Column(children: <Widget>[
@@ -436,8 +417,7 @@ class _RuqaaState extends State<Ruqaa> {
                                 Container(
                                   height: screenHeight / 4.67,
                                   width: screenWidth / 6,
-                                  margin: EdgeInsets.fromLTRB(
-                                      screenWidth / 6, 0, 0, 0),
+                                  margin: EdgeInsets.fromLTRB(screenWidth / 6, 0, 0, 0),
                                 ),
                                 Container(
                                   child: Center(
@@ -469,13 +449,10 @@ class _RuqaaState extends State<Ruqaa> {
                                 )
                               ])
                             ]),
-                            onTap: () {
-                              Navigator.of(context).pushNamed("ruqaa1");
-                            },
+                            onTap: () {},
                           ),
                         ],
                       ),
-
                     ],
                   ),
                 ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttergesture/Diwani.dart';
 import 'package:fluttergesture/Diwani_jali.dart';
+import 'package:fluttergesture/GenericFont.dart';
 import 'package:fluttergesture/Letters.dart';
 import 'package:fluttergesture/Naskh.dart';
 import 'package:fluttergesture/Tholoth.dart';
@@ -53,22 +54,28 @@ class MyApp extends StatelessWidget {
             return Categories();
           },
           'ruqaa': (context) {
-            return Ruqaa();
+            //return Ruqaa();
+            return GenericFont("ruqaa");
           },
           'diwani': (context) {
-            return Diwani();
+           // return Diwani();
+            return GenericFont("diwani");
           },
           'diwani_jali': (context) {
-            return Diwani_jali();
+           // return Diwani_jali();
+            return GenericFont("diwani_jali");
           },
           'farsi': (context) {
-            return farsi();
+            //return farsi();
+            return GenericFont("farsi");
           },
           'naskh': (context) {
-            return Naskh();
+            //return Naskh();
+            return GenericFont("naskh");
           },
           'tholoth': (context) {
-            return Tholoth();
+            //return Tholoth();
+            return GenericFont("tholoth");
           },
           'endPoint': (context) {
             return endPoint();

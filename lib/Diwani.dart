@@ -73,12 +73,12 @@ class _DiwaniState extends State<Diwani> {
                     children: <Widget>[
                       Container(
                         height: screenHeight / 8.73,
-                        width: screenWidth / 6.07,
+                        //width: screenWidth / 6.07,
                         // padding: EdgeInsets.all(10),
                         margin: EdgeInsets.fromLTRB(
-                            screenWidth / 12.14,
+                            screenWidth / 48.14,
                             screenHeight / 48.63,
-                            screenWidth / 45.53,
+                            screenWidth / 10.53,
                             screenHeight / 48.63),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(80),
@@ -99,7 +99,7 @@ class _DiwaniState extends State<Diwani> {
                                 width: screenWidth / 3.04,
                                 // padding: EdgeInsets.all(10),
                                 margin: EdgeInsets.fromLTRB(
-                                    screenWidth / 12.14,
+                                    screenWidth / 25.14,
                                     screenHeight / 48.63,
                                     screenWidth / 45.53,
                                     screenHeight / 48.63),
@@ -118,7 +118,7 @@ class _DiwaniState extends State<Diwani> {
                                   height: 280,
                                   width: 300,
                                   margin: EdgeInsets.fromLTRB(
-                                      screenWidth / 3.04, 0, 0, 0),
+                                      screenWidth / 4, 0, 0, 0),
                                 ),
                                 Container(
                                   child: Center(
@@ -158,7 +158,7 @@ class _DiwaniState extends State<Diwani> {
                                 height: screenHeight / 4.36,
                                 width: screenWidth / 3.04,
                                 // padding: EdgeInsets.all(10),
-                                margin: EdgeInsets.fromLTRB(0, screenHeight / 48.63, screenWidth / 45.53, screenHeight / 48.63),
+                                margin: EdgeInsets.fromLTRB(0, screenHeight / 48.63, 0, screenHeight / 48.63),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(80),
                                   // border: Border.all(color: Colors.black, width: 7),
@@ -172,7 +172,7 @@ class _DiwaniState extends State<Diwani> {
                                 //first element in column is the transparent offset
                                 Container(
                                   height: screenHeight / 4.67,
-                                  width: screenWidth /6,
+                                  width: screenWidth /0,
                                   margin: EdgeInsets.fromLTRB(screenWidth / 6, 0, 0, 0),
                                 ),
                                 Container(
@@ -219,7 +219,11 @@ class _DiwaniState extends State<Diwani> {
                                 height: screenHeight / 4.36,
                                 width: screenWidth / 3.04,
                                 // padding: EdgeInsets.all(10),
-                                margin: EdgeInsets.fromLTRB(screenWidth / 12.14, screenHeight / 48.63 , screenWidth / 45.53, screenHeight / 48.63 ),
+                                margin: EdgeInsets.fromLTRB(
+                                    screenWidth / 25.14,
+                                    screenHeight / 48.63,
+                                    screenWidth / 45.53,
+                                    screenHeight / 48.63 ),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(80),
                                   // border: Border.all(color: Colors.black, width: 7),
@@ -234,7 +238,7 @@ class _DiwaniState extends State<Diwani> {
                                 Container(
                                   height: screenHeight / 4.67,
                                   width: screenWidth / 6,
-                                  margin: EdgeInsets.fromLTRB(screenWidth / 3.04, 0, 0, 0),
+                                  margin: EdgeInsets.fromLTRB(screenWidth / 4, 0, 0, 0),
                                 ),
                                 Container(
                                   child: Center(
@@ -274,7 +278,7 @@ class _DiwaniState extends State<Diwani> {
                                 height: screenHeight / 4.36,
                                 width: screenWidth / 3.04,
                                 // padding: EdgeInsets.all(10),
-                                margin: EdgeInsets.fromLTRB(0, screenHeight / 48.63, screenWidth / 45.53, screenHeight / 48.63),
+                                margin: EdgeInsets.fromLTRB(0, screenHeight / 48.63, 0, screenHeight / 48.63),
 
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(80),
@@ -334,7 +338,11 @@ class _DiwaniState extends State<Diwani> {
                                 height: screenHeight / 4.36,
                                 width: screenWidth / 3.04,
                                 // padding: EdgeInsets.all(10),
-                                margin: EdgeInsets.fromLTRB(screenWidth / 12.14, screenHeight / 48.63, screenWidth / 45.53, screenHeight / 48.63),
+                                margin: EdgeInsets.fromLTRB(
+                                    screenWidth / 25.14,
+                                    screenHeight / 48.63,
+                                    screenWidth / 45.53,
+                                    screenHeight / 48.63),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(80),
                                   // border: Border.all(color: Colors.black, width: 7),
@@ -349,7 +357,7 @@ class _DiwaniState extends State<Diwani> {
                                 Container(
                                   height: screenHeight / 4.67,
                                   width: screenWidth / 6,
-                                  margin: EdgeInsets.fromLTRB(screenWidth / 3.04, 0, 0, 0),
+                                  margin: EdgeInsets.fromLTRB(screenWidth / 4, 0, 0, 0),
                                 ),
                                 Container(
                                   child: Center(
@@ -389,7 +397,7 @@ class _DiwaniState extends State<Diwani> {
                                 height: screenHeight / 4.36,
                                 width: screenWidth / 3.04,
                                 // padding: EdgeInsets.all(10),
-                                margin: EdgeInsets.fromLTRB(0, screenHeight / 48.63, screenWidth / 45.53, screenHeight / 48.63),
+                                margin: EdgeInsets.fromLTRB(0, screenHeight / 48.63, 0, screenHeight / 48.63),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(80),
                                   // border: Border.all(color: Colors.black, width: 7),

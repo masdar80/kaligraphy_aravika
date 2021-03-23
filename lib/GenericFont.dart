@@ -23,6 +23,8 @@ class _GenericFontState extends State<GenericFont> {
     _mediaQueryData = MediaQuery.of(context);
     screenWidth = _mediaQueryData.size.width;
     screenHeight = _mediaQueryData.size.height;
+    if(screenWidth<screenHeight)
+      screenHeight=screenHeight*0.50;
     return Directionality(
         textDirection: TextDirection.rtl,
         child: Scaffold(
@@ -106,7 +108,7 @@ class _GenericFontState extends State<GenericFont> {
                                 margin: EdgeInsets.fromLTRB(
                                     screenWidth / 25.14,
                                     screenHeight / 48.63,
-                                    screenWidth / 45.53,
+                                    screenWidth / 25.53,
                                     screenHeight / 48.63),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(80),
@@ -120,8 +122,8 @@ class _GenericFontState extends State<GenericFont> {
                               Column(children: <Widget>[
                                 //first element in column is the transparent offset
                                 Container(
-                                  height: 280,
-                                  width: 300,
+                                  height: screenHeight / 4.67,
+                                  width: screenWidth / 6,
                                   margin: EdgeInsets.fromLTRB(
                                       screenWidth / 4, 0, 0, 0),
                                 ),
@@ -163,7 +165,7 @@ class _GenericFontState extends State<GenericFont> {
                                 height: screenHeight / 4.36,
                                 width: screenWidth / 3.04,
                                 // padding: EdgeInsets.all(10),
-                                margin: EdgeInsets.fromLTRB(0, screenHeight / 48.63, 0, screenHeight / 48.63),
+                                margin: EdgeInsets.fromLTRB(0, screenHeight / 48.63, 0, screenHeight / 48.63 ),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(80),
                                   // border: Border.all(color: Colors.black, width: 7),
@@ -177,7 +179,7 @@ class _GenericFontState extends State<GenericFont> {
                                 //first element in column is the transparent offset
                                 Container(
                                   height: screenHeight / 4.67,
-                                  width: screenWidth /0,
+                                  width: screenWidth /6,
                                   margin: EdgeInsets.fromLTRB(screenWidth / 6, 0, 0, 0),
                                 ),
                                 Container(

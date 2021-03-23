@@ -72,12 +72,13 @@ flutter:
     - img/categories/options_up_01.png
     - img/categories/orange_bk.png
     - img/notes/ruqaa/Ruqa1.jpg
-    - img/subcat/ruqaa/01_All buttons_01.png
-    - img/subcat/ruqaa/01_All buttons_02.png
-    - img/subcat/ruqaa/01_All buttons_06.png
-    - img/subcat/ruqaa/01_All buttons_04.png
-    - img/subcat/ruqaa/01_All buttons_03.png
-    - img/subcat/ruqaa/01_All buttons_05.png
+    - img/subcat/ruqaa/buttons_01.png
+    - img/subcat/ruqaa/buttons_02.png
+    - img/subcat/ruqaa/buttons_06.png
+    - img/subcat/ruqaa/buttons_04.png
+    - img/subcat/ruqaa/buttons_03.png
+    - img/subcat/ruqaa/buttons_05.png
+    - img/subcat/ruqaa/buttons_07.png
     - img/subcat/diwani/buttons_01.png
     - img/subcat/diwani/buttons_02.png
     - img/subcat/diwani/buttons_03.png
@@ -85,34 +86,34 @@ flutter:
     - img/subcat/diwani/buttons_05.png
     - img/subcat/diwani/buttons_06.png
     - img/subcat/diwani/buttons_07.png
-    - img/subcat/diwani_jali/03_buttons_01.png
-    - img/subcat/diwani_jali/03_buttons_02.png
-    - img/subcat/diwani_jali/03_buttons_03.png
-    - img/subcat/diwani_jali/03_buttons_04.png
-    - img/subcat/diwani_jali/03_buttons_05.png
-    - img/subcat/diwani_jali/03_buttons_06.png
-    - img/subcat/diwani_jali/03_buttons_07.png
-    - img/subcat/farsi/04_buttons_01.png
-    - img/subcat/farsi/04_buttons_02.png
-    - img/subcat/farsi/04_buttons_03.png
-    - img/subcat/farsi/04_buttons_04.png
-    - img/subcat/farsi/04_buttons_05.png
-    - img/subcat/farsi/04_buttons_06.png
-    - img/subcat/farsi/04_buttons_07.png
-    - img/subcat/tholoth/05_buttons_01.png
-    - img/subcat/tholoth/05_buttons_02.png
-    - img/subcat/tholoth/05_buttons_03.png
-    - img/subcat/tholoth/05_buttons_04.png
-    - img/subcat/tholoth/05_buttons_05.png
-    - img/subcat/tholoth/05_buttons_06.png
-    - img/subcat/tholoth/05_buttons_07.png
-    - img/subcat/naskh/05_buttons_01.png
-    - img/subcat/naskh/05_buttons_02.png
-    - img/subcat/naskh/05_buttons_03.png
-    - img/subcat/naskh/05_buttons_04.png
-    - img/subcat/naskh/05_buttons_05.png
-    - img/subcat/naskh/05_buttons_06.png
-    - img/subcat/naskh/05_buttons_07.png
+    - img/subcat/diwani_jali/buttons_01.png
+    - img/subcat/diwani_jali/buttons_02.png
+    - img/subcat/diwani_jali/buttons_03.png
+    - img/subcat/diwani_jali/buttons_04.png
+    - img/subcat/diwani_jali/buttons_05.png
+    - img/subcat/diwani_jali/buttons_06.png
+    - img/subcat/diwani_jali/buttons_07.png
+    - img/subcat/farsi/buttons_01.png
+    - img/subcat/farsi/buttons_02.png
+    - img/subcat/farsi/buttons_03.png
+    - img/subcat/farsi/buttons_04.png
+    - img/subcat/farsi/buttons_05.png
+    - img/subcat/farsi/buttons_06.png
+    - img/subcat/farsi/buttons_07.png
+    - img/subcat/tholoth/buttons_01.png
+    - img/subcat/tholoth/buttons_02.png
+    - img/subcat/tholoth/buttons_03.png
+    - img/subcat/tholoth/buttons_04.png
+    - img/subcat/tholoth/buttons_05.png
+    - img/subcat/tholoth/buttons_06.png
+    - img/subcat/tholoth/buttons_07.png
+    - img/subcat/naskh/buttons_01.png
+    - img/subcat/naskh/buttons_02.png
+    - img/subcat/naskh/buttons_03.png
+    - img/subcat/naskh/buttons_04.png
+    - img/subcat/naskh/buttons_05.png
+    - img/subcat/naskh/buttons_06.png
+    - img/subcat/naskh/buttons_07.png
     - img/notes/ruqaa/letters/letter (1).jpg
     - img/notes/ruqaa/letters/letter (2).jpg
     - img/notes/ruqaa/letters/letter (3).jpg
@@ -152,9 +153,9 @@ flutter:
     - img/vector_brushes/brush.ai
     - img/vector_brushes/brush.eps
     - img/vector_brushes/brush.pdf
-    
 
 
+#mac test
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

@@ -8,7 +8,7 @@ import 'package:fluttergesture/Tholoth.dart';
 import 'package:fluttergesture/farsi.dart';
 
 import 'package:fluttergesture/login.dart';
-import 'file:///F:/flutter/Projects/raqeem_app/lib/components/endPoint.dart';
+//import 'file:///F:/flutter/Projects/raqeem_app/lib/components/endPoint.dart';
 import 'package:fluttergesture/temp/CanvasPainting.dart';
 import 'components/DrawPage.dart';
 import 'Ruqaa.dart';
@@ -18,6 +18,8 @@ import 'HomePage.dart';
 import 'InAppPurchase.dart';
 import 'components/GetImage.dart';
 import 'package:flutter/services.dart';
+
+import 'components/endPoint.dart';
 
 void main() {
   InAppPurchaseConnection.enablePendingPurchases();

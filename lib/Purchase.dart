@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'components/drawer.dart';
-import 'package:in_app_purchase/in_app_purchase.dart';
+//import 'package:in_app_purchase/in_app_purchase.dart';
 
 class Purchases extends StatefulWidget {
   @override

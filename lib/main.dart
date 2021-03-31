@@ -13,16 +13,16 @@ import 'package:fluttergesture/temp/CanvasPainting.dart';
 import 'components/DrawPage.dart';
 import 'Ruqaa.dart';
 import 'Purchase.dart';
-import 'package:in_app_purchase/in_app_purchase.dart';
+//import 'package:in_app_purchase/in_app_purchase.dart';
 import 'HomePage.dart';
-import 'InAppPurchase.dart';
+//import 'InAppPurchase.dart';
 import 'components/GetImage.dart';
 import 'package:flutter/services.dart';
 
 import 'components/endPoint.dart';
 
 void main() {
-  InAppPurchaseConnection.enablePendingPurchases();
+ // InAppPurchaseConnection.enablePendingPurchases();
 
   runApp(MyApp());
 }

@@ -427,22 +427,49 @@ class _DrawPageState extends State<DrawPage> {
                             image: DecorationImage(
                                 image: AssetImage(notePath),
                                 fit: BoxFit.cover)),
-                        child: XGestureDetector(
+                        child:GestureDetector(
+
+                          onPanStart: (details) {
+                            RenderBox box = context.findRenderObject();
+                            Offset point = box.globalToLocal(details.globalPosition);
+                            point = point.translate(
+                                -15, -2 * (AppBar().preferredSize.height) + 15);
+                            setState(() {
+                              _offsets.add(point);
+                            });
+                          },
+                          onPanUpdate: (details) {
+
+                            setState(() {
+                              RenderBox box = context.findRenderObject();
+                              Offset point =
+                              box.globalToLocal(details.globalPosition);
+                              point = point.translate(
+                                  -15, -2 * (AppBar().preferredSize.height) + 15);
+                              _offsets.add(point);
+                            });
+                          },
+
+
+                          child: Container(
+                            // margin: EdgeInsets.all(1.0),
+                            //  alignment: Alignment.topLeft,
+                            height: MediaQuery.of(context).size.height -
+                                (104 + AppBar().preferredSize.height),
+                            width: MediaQuery.of(context).size.width,
+
+                            //  color: Colors.blueGrey[50],
+
+                            child: Text(widget.title),/*CustomPaint(
+                          painter: new FlipBookPainter(points, _offsets, _profileColor, _lineSize, image),
+                          child: Container(
+
+                              )),*/
+                          ),
+                        ),
+                        /*XGestureDetector(
                           doubleTapTimeConsider: 300,
                           longPressTimeConsider: 200,
-/*handle the long press but it doesn't work as we want*/
-                          /*onLongPress: (pointer, localPos, position) {
-                          // TODO
-                          print("looooong befor");
-                          print(strokeWidth);
-                          incrementCounter();
-                          testload('img/brush-01_small.png', strokeWidth, doubleToInt(_currentSliderValue));
-                          print("looooong after");
-                          print(strokeWidth);
-
-
-                        },*/
-
                           onMoveUpdate:
                               (localPos, position, localDelta, delta) {
                             // print("PAAAN here we go");
@@ -480,7 +507,7 @@ class _DrawPageState extends State<DrawPage> {
                                     // color: Colors.red[50],
                                     )),
                           ),
-                        ),
+                        ),*/
                       )),
                 ),
                 /*Container(

@@ -53,6 +53,9 @@ class _DrawPageState extends State<DrawPage> {
   String selectedBrush = "img/brush/01/black1.png";
   Setting conf = new Setting();
 
+
+  bool _longpress = false;
+  bool _loopActive = false;
   @override
   void initState() {
 
@@ -391,6 +394,8 @@ class _DrawPageState extends State<DrawPage> {
 
 
 
+
+
     // load('img/vector_brushes/brush.pdf');
     /*Transform(
         transform: Matrix4.diagonal3(Vector3(_scale, _scale, _scale)),
@@ -429,117 +434,96 @@ class _DrawPageState extends State<DrawPage> {
                                 fit: BoxFit.cover)),
                         child:GestureDetector(
 
+                          onLongPress:()
+                          {
+                            _longpress=true;
+
+                            setState(() {
+
+                              incrementCounter();
+
+
+                            });
+                          },
+                            onLongPressMoveUpdate:(details)
+                          {
+                            _longpress=true;
+
+                                setState(() {
+
+                                  incrementCounter();
+
+
+                                });
+                          },
+                          onLongPressUp:()
+                          {
+
+                            setState(() {
+                              _longpress=false;
+                            });
+
+                          } ,
+                          onLongPressEnd:(details)
+                          {
+
+                            setState(() {
+                              _longpress=false;
+                            });
+
+                          },
                           onPanStart: (details) {
                             RenderBox box = context.findRenderObject();
                             Offset point = box.globalToLocal(details.globalPosition);
+
                             point = point.translate(
-                                -15, -2 * (AppBar().preferredSize.height) + 15);
+                                -image.height / 2, -image.width / 2);
+                            points.add(TouchPoints(
+                                points: point,
+                                paint: Paint(),
+                                image: image));
+                            spoints.add(
+                                SavedhPoints(x: point.dx, y: point.dy));
+
                             setState(() {
-                              _offsets.add(point);
+
                             });
                           },
                           onPanUpdate: (details) {
 
+                            RenderBox box = context.findRenderObject();
+                            Offset point = box.globalToLocal(details.globalPosition);
+
+                            point = point.translate(
+                                -image.height / 2, -image.width / 2);
+                            points.add(TouchPoints(
+                                points: point,
+                                paint: Paint(),
+                                image: image));
+                            spoints.add(
+                                SavedhPoints(x: point.dx, y: point.dy));
+
                             setState(() {
-                              RenderBox box = context.findRenderObject();
-                              Offset point =
-                              box.globalToLocal(details.globalPosition);
-                              point = point.translate(
-                                  -15, -2 * (AppBar().preferredSize.height) + 15);
-                              _offsets.add(point);
+
                             });
                           },
 
 
                           child: Container(
-                            // margin: EdgeInsets.all(1.0),
-                            //  alignment: Alignment.topLeft,
-                            height: MediaQuery.of(context).size.height -
-                                (104 + AppBar().preferredSize.height),
-                            width: MediaQuery.of(context).size.width,
-
-                            //  color: Colors.blueGrey[50],
-
-                            child: Text(widget.title),/*CustomPaint(
-                          painter: new FlipBookPainter(points, _offsets, _profileColor, _lineSize, image),
-                          child: Container(
-
-                              )),*/
-                          ),
-                        ),
-                        /*XGestureDetector(
-                          doubleTapTimeConsider: 300,
-                          longPressTimeConsider: 200,
-                          onMoveUpdate:
-                              (localPos, position, localDelta, delta) {
-                            // print("PAAAN here we go");
-                            /*   position = position.translate(
-                              1/_zoom, (-2 * (AppBar().preferredSize.height) + 15)*_zoom);*/
-                            //   image.width/2
-                            localPos = localPos.translate(
-                                -image.height / 2, -image.width / 2);
-                            //_offsets.clear();
-                           // _offsets.add(localPos);
-
-                            points.add(TouchPoints(
-                                points: localPos,
-                                paint: Paint(),
-                                image: image));
-                            spoints.add(
-                                SavedhPoints(x: localPos.dx, y: localPos.dy));
-
-                            setState(() {});
-                          },
-                          child: Container(
-                            // margin: EdgeInsets.all(1.0),
-                            //  alignment: Alignment.topLeft,
                             height: MediaQuery.of(context).size.height,
                             width: MediaQuery.of(context).size.width,
-
-                            //  color: Colors.blueGrey[50],
 
                             child: CustomPaint(
                                 painter: new FlipBookPainter(points),
                                 child: Container(
 
-                                    // height: 300,
-                                    //  width: 300,
-                                    // color: Colors.red[50],
-                                    )),
+                                )),
                           ),
-                        ),*/
+                        ),
+
                       )),
                 ),
-                /*Container(
-                color: Colors.blue,
-                width: MediaQuery
-                    .of(context)
-                    .size
-                    .width,
-                height: 80,
-                alignment: Alignment.centerLeft,
-                child: Row(
-                  children: <Widget>[
-                    MySlider(onSliderChanged),
-                    IconButton(
-                        icon: new Icon(
-                          Icons.undo,
-                        ),
-                        tooltip: 'Undo',
-                        iconSize: 50,
-                        onPressed: () {}),
-                    IconButton(
-                        icon: new Icon(
-                          Icons.clear,
-                        ),
-                        tooltip: 'Undo',
-                        iconSize: 50,
-                        onPressed: () {
-                          setState(() => _offsets.clear());
-                        }),
-                  ],
-                ),
-              )*/
+
               ],
             ),
           ),
@@ -550,12 +534,27 @@ class _DrawPageState extends State<DrawPage> {
     );
   }
 
-  void incrementCounter() {
-    setState(() {
-      strokeWidth += 5;
-    });
-  }
+  void incrementCounter() async {
+    // make sure that only one loop is active
+   // if (_loopActive) return;
 
+    _loopActive = true;
+
+    while (_longpress) {
+      setState(() {
+        if(strokeWidth<30)
+       { strokeWidth += 1;
+        print ("width increase : ");
+        print (strokeWidth);
+        testload(selectedBrush, strokeWidth,
+            doubleToInt(_currentSliderValue));}
+
+      });
+
+      // wait a bit
+      await Future.delayed(Duration(milliseconds: 200));
+    }
+  }
   void _onColorSelected(Color color) {
     setState(() {
       _profileColor = color;

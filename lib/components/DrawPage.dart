@@ -549,6 +549,7 @@ class _DrawPageState extends State<DrawPage> {
         testload(selectedBrush, strokeWidth,
             doubleToInt(_currentSliderValue));}
 
+
       });
 
       // wait a bit
